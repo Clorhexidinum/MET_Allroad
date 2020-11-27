@@ -1,0 +1,128 @@
+.questions {
+  &__items {
+    min-width: 757px;
+    padding-bottom: 15px;
+  }
+
+  &__item {
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 590px;
+    position: relative;
+  }
+
+  &__item-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    color: rgba(#ffffff, .8);
+    padding: 20px 10px 20px 40px;
+    position: relative;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    &::after {
+      content: url(../images/accordion-arrow.svg);
+      position: absolute;
+      width: 72px;
+      height: 67px;
+      background-color: #ffffff;
+      right: -72px;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item-box {
+    display: none;
+  }
+
+  &__item-text {
+    padding: 0 5px 75px 50px;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 4px;
+  }
+
+  &__slider-img {
+    width: 480px;
+    position: absolute;
+    left: 755px;
+
+    &--one {
+      top: 0;
+    }
+
+    &--two {
+      top: -72px;
+    }
+
+    &--three{
+      top: -143px;
+    }
+
+    &--four {
+      top: -215px;
+    }
+  }
+
+  &__item.questions__item--active {
+    .questions__item-title::after {
+      transform: rotate(180deg);
+    }
+
+    .questions__item-box {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .questions {
+    &__item {
+      margin: 0 auto;
+    }
+
+    &__item-text {
+      padding: 0 5px 30px 50px;
+    }
+
+    &__slider-img {
+      position: initial;
+      margin: 0 auto;
+      display: block;
+      width: 350px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .questions {
+    &__items {
+      min-width: auto;
+    }
+
+    &__item-title {
+      padding: 10px 40px 10px 40px;
+      font-size: 18px;
+      line-height: 23px;
+
+      &::after {
+       background-color: transparent;
+       right: -10px;
+       top: -13px;
+      }
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__slider-img {
+      width: 250px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.up-arrow {
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  z-index: 20;
+  opacity: .7;
+}
+
+.up-arrow:hover {
+  opacity: 1;
+}

@@ -1,0 +1,206 @@
+.contacts {
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    width: 240px;
+    margin-right: 60px;
+    margin-left: 50px;
+  }
+
+  &__info-box {
+    margin-bottom: 30px;
+  }
+
+  &__info-title {
+    line-height: 24px;
+    font-size: 21px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 0 0 13px;
+  }
+
+  &__info-phone,
+  &__info-email,
+  &__info-adres {
+  font-size: 15px;
+  line-height: 18px;
+  position: relative;
+  outline: none;
+  }
+
+  &__info-phone::after,
+  &__info-email::after {
+    content: "";
+    background-color: #fff;
+    transition: all 0.3s;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    right: 50%;
+    width: auto;
+    height: 1px;
+    opacity: 0;
+  }
+
+  &__info-phone:hover::after,
+  &__info-phone:focus::after,
+  &__info-email:hover::after,
+  &__info-email:focus::after {
+    left: 0px;
+    right: 0px;
+    width: auto;
+    opacity: 1;
+  }
+
+  &__form {
+    width: 570px;
+    margin-right: 106px;
+  }
+
+  &__form-title {
+    line-height: 24px;
+    font-size: 21px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 0 0 13px;
+  }
+
+  &__form-text {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0 0 12px;
+  }
+
+  &__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__form-input,
+  &__form-textarea {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    padding: 15px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    
+    &::placeholder {
+      color: rgba(#ffffff, .4);
+    }
+  }
+
+  &__form-input {
+    width: 49%;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  &__form-textarea {
+    min-height: 144px;
+    width: 100%;
+    resize: none;
+    margin-bottom: 20px;
+  }
+
+  &__form-btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    padding: 9px 15px;
+    color: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      color: #000000;
+      background-color: #ffffff;
+    }
+  }
+
+  &__social {
+    display: flex;
+  }
+
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__social-item {
+    margin: 14px 0;
+  }
+
+  &__social-link {
+    opacity: 0.5;
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 1;
+    }
+  }
+
+  &__social-img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-left: 25px;
+    }
+
+    &__form {
+      margin-right: 25px;
+      margin-left: 25px;
+      width: auto;
+    }
+
+    &__form-line {
+      flex-wrap: wrap;
+    }
+
+    &__form-input {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__social {
+      margin-top: 25px;
+      margin-left: 0;
+    }
+
+    &__social-list {
+      flex-direction: row;
+      margin: 0 auto;
+    }
+
+    &__social-item {
+      margin: 15px 25px;
+    }
+  }
+}

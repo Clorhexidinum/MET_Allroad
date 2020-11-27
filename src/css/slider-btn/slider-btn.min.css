@@ -1,0 +1,1 @@
+.slider-btn{padding:16px 26px;border:none;background-color:#ffffff;position:absolute;right:0;cursor:pointer;z-index:5;bottom:-45px;outline:none}.slider-btn svg{stroke:#000}.slider-btn__left{right:60px}.slider-btn:hover{background-color:#000}.slider-btn:hover svg{stroke:#ffffff}@media (max-width: 1150px){.slider-btn{display:none !important}}
